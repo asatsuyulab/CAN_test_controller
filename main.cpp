@@ -31,19 +31,10 @@ int main() {
     init_btn.fall(&init);
     run_btn.mode(PullUp);
     run_btn.fall(&run);
-    // printf("main()\n");
-    // char counter = 0;
     can.frequency(1000000);
-    // CANMessage msg;
     led1 = 1;
     while(1) {
-        // printf("loop()\r\n");
-        // if(can.read(msg)) {
-        //     for(int i = 0; i < msg.len; i++){
-        //         printf("%d, ", msg.data[i]);
-        //     }
-        // } 
-        // led1 =! usr_btn;
+
         if(!usr_btn){
             if(val < pi/2){
                 val += 0.003;
